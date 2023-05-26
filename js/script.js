@@ -47,21 +47,36 @@ const userTripLong = parseInt(prompt('Indica quanti km devi percorrere'));
 // Ricavo il prezzo del biglietto
 const priceTicket = basePrice * userTripLong
 
-// Ricavo lo sconto in base all'età
-let discount = 0
-//Se l'utente indica un'età minore di 18 anni applico lo sconto del 20%
-if (userAge < 18) {
-    discount = priceTicket * 0.2
-//Se l'utente indica un'età maggiore di 65 anni applico lo sconto del 40%
-} else if (userAge >= 65) {
-    discount = priceTicket * 0.4
+console.log('Prezzo non scontato: ' + priceTicket)
+
+//Effettuo un controllo in modo che l'utente possa inserire solo numeri e non altri caratteri
+
+if (isNaN(userAge) || isNaN(userTripLong) || userAge < 0 || userTripLong < 1) {
+    alert ('I valori inseriti non sono validi')
+
+    //Altrimenti proseguo con il calcolo
+} else {
+    
+    // Ricavo lo sconto in base all'età
+    let discount = 0
+    //Se l'utente indica un'età minore di 18 anni applico lo sconto del 20%
+    if (userAge < 18) {
+        discount = priceTicket * 0.2
+    //Se l'utente indica un'età maggiore di 65 anni applico lo sconto del 40%
+    } else if (userAge >= 65) {
+        discount = priceTicket * 0.4
+    }
+
+    console.log('Sconto: ' + discount)
+
+    // Calcolo prezzo finale del biglietto con lo sconto
+    const resultPrice = priceTicket - discount
+    console.log(resultPrice)
+    finalPricePlaceholder.innerText += ' € ' + resultPrice
+    
+    targetPlaceholder.innerText += ' ' + userTripLong
 }
 
-// Calcolo prezzo finale del biglietto con lo sconto
-const resultPrice = priceTicket - discount
-console.log(resultPrice)
 
-finalPricePlaceholder.innerText += ' € ' + resultPrice
 
-targetPlaceholder.innerText += ' ' + userTripLong
 
