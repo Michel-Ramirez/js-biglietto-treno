@@ -39,10 +39,10 @@ const targetPlaceholder = document.getElementById('target')
 const basePrice = 0.25;
 
 // Interrogo età del utente
-const userAge = parseInt(prompt('Digita qual è la tua età:')).trim();
+const userAge = parseInt(prompt('Digita qual è la tua età:'));
 
 // Interrogo km che dovrà percorrere l'utente
-const userTripLong = parseInt(prompt('Indica quanti km devi percorrere')).trim(); 
+const userTripLong = parseInt(prompt('Indica quanti km devi percorrere')); 
 
 // Ricavo il prezzo del biglietto
 const priceTicket = basePrice * userTripLong
