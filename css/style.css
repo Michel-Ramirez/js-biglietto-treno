@@ -1,0 +1,58 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+/****** TAICKET MAIN ******/
+.container-ticket-main {
+    border-right: 2px dashed white;
+}
+
+.ticket-main {
+    height: 300px;
+    width: 600px;
+    background-color: #DB2E44;
+    border-radius: 20px 20px 0 0;
+}
+
+.footer-ticket {
+    height: 50px;
+    width: 600px;
+    background-color: #9CC6FA;
+    border-radius: 0 0 20px 20px;
+}
+
+.ticket-main .logo img {
+    height: 50px;
+    margin-left: 45px;
+}
+
+.ticket-main img {
+    height: 100px;
+}
+
+/******* TICKET SMALL *******/
+
+.ticket-small {
+    height: 300px;
+    width: 200px;
+    background-color: #DB2E44;
+    border-radius: 20px 20px 0 0;
+}
+
+.footer-ticket-small {
+    height: 50px;
+    width: 200px;
+    background-color: #9CC6FA;
+    border-radius: 0 0 20px 20px;
+}
+
+
+.ticket-small img {
+    height: 150px;
+}
