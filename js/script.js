@@ -51,7 +51,7 @@ console.log('Prezzo non scontato: ' + priceTicket)
 
 //Effettuo un controllo in modo che l'utente possa inserire solo numeri e non altri caratteri
 
-if (isNaN(userAge) || isNaN(userTripLong) || userAge < 0 || userTripLong < 1) {
+if (isNaN(userAge) || isNaN(userTripLong) || userAge < 0 || userTripLong < 0) {
     alert ('I valori inseriti non sono validi')
 
     //Altrimenti proseguo con il calcolo
@@ -72,11 +72,7 @@ if (isNaN(userAge) || isNaN(userTripLong) || userAge < 0 || userTripLong < 1) {
     // Calcolo prezzo finale del biglietto con lo sconto
     const resultPrice = priceTicket - discount
     console.log(resultPrice)
-    finalPricePlaceholder.innerText += ' € ' + resultPrice
+    finalPricePlaceholder.innerText += ' € ' + resultPrice.toFixed(2)
     
     targetPlaceholder.innerText += ' ' + userTripLong
 }
-
-
-
-
